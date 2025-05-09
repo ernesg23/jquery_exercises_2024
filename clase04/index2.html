@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<!--
+<style>
+    table {
+        border-radius: 5px 12px 4px 7px;
+        border: 3px solid black;
+        background-color: salmon;
+        width: 500px;
+        height: 300px;
+    }
+
+    .colCentro {
+        background-color: red;
+    }
+</style>
+-->
+<script>
+    function cartel(valor){
+        alert(valor)
+    }
+</script>
+<body>
+    <table>
+        <tr><!--Fila-->
+            <td id="col1"><!--Columna-->
+            </td>
+            <td class="colCentro">
+                <button onclick="cartel(2)">
+                    2
+                </button>
+            </td>
+            <td>
+                <button onclick="cartel(3)">
+                    3
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="cartel(4)">
+                    4
+                </button>
+            </td>
+            <td class="colCentro">
+                <button onclick="cartel(5)">
+                    5
+                </button>
+            </td>
+            <td>
+                <button onclick="cartel(6)">
+                    6
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    document.getElementById("col1").innerHTML = "hola";
+</script>
+
+</html>

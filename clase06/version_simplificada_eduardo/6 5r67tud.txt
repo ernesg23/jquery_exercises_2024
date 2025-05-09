@@ -1,0 +1,52 @@
+<?php
+    $nombres = ["nicolas", "juan ignacio", "aldo", "maria elena", "lucia", "clara", "guillermo del toro"];
+    $n_elegido = $nombres[rand(0, (count($nombres) - 1))];
+    $vocales = ['a'=>0, 'e'=>0, 'i'=>0, 'o'=>0, 'u'=>0, 'espacio' => 0];
+
+    echo $n_elegido . "<br>";
+
+    for($i = 0; $i < strlen($n_elegido); $i++){
+        if($n_elegido[$i] == "a"){ $vocales['a']++; }
+        elseif($n_elegido[$i] == "e"){ $vocales['e']++; }
+        elseif($n_elegido[$i] == "i"){ $vocales['i']++; }
+        elseif($n_elegido[$i] == "o"){ $vocales['o']++; }
+        elseif($n_elegido[$i] == "u"){ $vocales['u']++; }
+        if($n_elegido[$i] == " "){ $vocales['espacio']++; }
+    }
+
+    echo "<br> vocales totales: " .  array_sum($vocales) . "<br>";
+    echo "a totales: " . $vocales['a'] . "<br>";
+    echo "e totales: " . $vocales['e'] . "<br>";
+    echo "i totales: " . $vocales['i'] . "<br>";
+    echo "o totales: " . $vocales['o'] . "<br>";
+    echo "u totales: " . $vocales['u'] . "<br>";
+    echo "espacios totales: " . $vocales['espacio'] . "<br>";
+?>
+
+<script>
+    var nombres = ["nicolas", "juan", "aldo", "mariana", "lucia", "clara", "guillermo del toro"];
+    var n_elegido = nombres[Math.floor(Math.random() * (nombres.length - 1))];
+    var vocales = {'a':0, 'e': 0, 'i': 0, 'o': 0, 'u': 0, 'espacio' : 0};
+
+    document.write("<br>" + n_elegido + "<br>");
+
+    for(i = 0; i < n_elegido.length; i++){
+        if(n_elegido[i] == "a"){ vocales['a']++; }
+        else if(n_elegido[i] == "e"){vocales['e']++}
+        else if(n_elegido[i] == "i"){vocales['i']++}
+        else if(n_elegido[i] == "o"){vocales['o']++}
+        else if(n_elegido[i] == "u"){vocales['u']++}
+        if(n_elegido[i] == " "){ vocales['espacio']++; }
+    }
+
+    var v_totales = vocales['a'] + vocales['e'] + vocales['i'] + vocales['o'] + vocales['u'];
+
+    document.write("<br> vocales totales: " + v_totales + "<br>");
+    document.write("a totales: " + vocales['a'] + "<br>");
+    document.write("e totales: " + vocales['e'] + "<br>");
+    document.write("i totales: " + vocales['i'] + "<br>");
+    document.write("o totales: " + vocales['o'] + "<br>");
+    document.write("u totales: " + vocales['u'] + "<br>");
+    document.write("espacios totales: " + vocales['espacio'] + "<br>");
+
+</script>
